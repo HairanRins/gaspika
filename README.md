@@ -1,47 +1,47 @@
-![screenshoot of project](./screenshoots/screenshoot.png)
+![capture d'écran du projet](./screenshoots/screenshoot.png)
 
 # Gaspika
 
-Gaspika is a mobile application that helps households reduce food waste. Users build weekly shopping lists, track the food they already own, and get notified before an item reaches its expiration date. The app relies on machine learning models to predict how long a food item can be kept and the quantity worth buying, so users shop for what they actually need. It is built as a monorepo with a Flutter mobile app, a FastAPI backend, and the trained ML models.
+Gaspika est une application mobile qui aide les foyers à réduire le gaspillage alimentaire. Les utilisateurs constituent des listes de courses hebdomadaires, suivent les aliments qu'ils possèdent déjà et reçoivent une notification avant qu'un aliment n'atteigne sa date d'expiration. L'application s'appuie sur des modèles de machine learning pour prédire la durée de conservation d'un aliment et la quantité qu'il vaut la peine d'acheter, afin que les utilisateurs n'achètent que ce dont ils ont réellement besoin. Elle est organisée en monorepo comprenant une application mobile Flutter, un backend FastAPI et les modèles ML entraînés.
 
-## Link for Video demo
-[Click to see demo](https://res.cloudinary.com/djviemljt/video/upload/v1784983705/demo_gaspika_xtsc19.mp4)
+## Lien de la vidéo de démonstration
+[Cliquer pour voir la démo](https://res.cloudinary.com/djviemljt/video/upload/v1784983705/demo_gaspika_xtsc19.mp4)
 
-## Features
+## Fonctionnalités
 
-### Mobile app
+### Application mobile
 
-- [x] Onboarding screens
-- [x] Sign up and login with JWT authentication
-- [x] Weekly shopping lists: generation, update, deletion
-- [x] Shopping list filters
-- [x] Add food items with a photo, autocomplete, quantity and unit
-- [x] Quantity, shelf life and storage tips suggested by the prediction models when adding an item
-- [x] Mark an item as purchased, update or delete it
-- [x] Food details with estimated shelf life
-- [x] Home screen with the available food of the week
-- [x] Push notifications with unread counter, read and delete actions
-- [x] Settings: account information, password, notification preferences, account deletion
+- [x] Écrans d'accueil (onboarding)
+- [x] Inscription et connexion avec authentification JWT
+- [x] Listes de courses hebdomadaires : génération, modification, suppression
+- [x] Filtres sur les listes de courses
+- [x] Ajout d'aliments avec photo, autocomplétion, quantité et unité
+- [x] Quantité, durée de conservation et conseils de stockage suggérés par les modèles de prédiction lors de l'ajout d'un aliment
+- [x] Marquer un aliment comme acheté, le modifier ou le supprimer
+- [x] Détails d'un aliment avec sa durée de conservation estimée
+- [x] Écran d'accueil avec les aliments disponibles de la semaine
+- [x] Notifications push avec compteur de non-lus, lecture et suppression
+- [x] Paramètres : informations du compte, mot de passe, préférences de notification, suppression du compte
 
 ### Backend
 
-- [x] REST API with Swagger documentation
-- [x] JWT authentication and bcrypt password hashing
-- [x] PostgreSQL with async SQLAlchemy and Alembic migrations
-- [x] Redis caching
-- [x] Scheduled notifications: expiration alerts and end-of-week list reminders
-- [x] Push notifications through Firebase Cloud Messaging
-- [x] Image upload to ImgBB
-- [x] Account deletion with soft delete and personal data purge
-- [x] Docker Compose setup for the API, PostgreSQL and Redis
-- [x] ML models served as prediction endpoints for food shelf life and recommended quantity
-- [x] Predicted shelf life saved on the item and used to schedule its expiration notification
+- [x] API REST avec documentation Swagger
+- [x] Authentification JWT et hachage des mots de passe avec bcrypt
+- [x] PostgreSQL avec SQLAlchemy asynchrone et migrations Alembic
+- [x] Mise en cache avec Redis
+- [x] Notifications planifiées : alertes d'expiration et rappels de liste en fin de semaine
+- [x] Notifications push via Firebase Cloud Messaging
+- [x] Envoi d'images vers ImgBB
+- [x] Suppression de compte avec soft delete et purge des données personnelles
+- [x] Configuration Docker Compose pour l'API, PostgreSQL et Redis
+- [x] Modèles ML exposés comme endpoints de prédiction de la durée de conservation et de la quantité recommandée
+- [x] Durée de conservation prédite enregistrée sur l'aliment et utilisée pour planifier sa notification d'expiration
 
-## Tech stack
+## Stack technique
 
 |             |                                                                                                              |
 | ----------- | ------------------------------------------------------------------------------------------------------------ |
 | **Mobile**  | Flutter, Provider, GoRouter, Dio, Firebase Messaging, Flutter Local Notifications       |
-| **Backend** | FastAPI, Uvicorn, SQLAlchemy + Alembic, PostgreSQL , Redis, APScheduler, JWT, Bcrypt, Firebase Cloud Messaging, ImgBB |
-| **AI / ML** | scikit-learn, pandas, LangChain + Groq, Chroma, Sentence Transformers                                          |
+| **Backend** | FastAPI, Uvicorn, SQLAlchemy + Alembic, PostgreSQL, Redis, APScheduler, JWT, Bcrypt, Firebase Cloud Messaging, ImgBB |
+| **IA / ML** | scikit-learn, pandas, LangChain + Groq, Chroma, Sentence Transformers                                          |
 | **Infra**   | Docker Compose                                                                                                 |
