@@ -1,5 +1,3 @@
-![capture d'écran du projet](./screenshoots/screenshoot.png)
-
 # Gaspika
 
 Gaspika est une application mobile qui aide les foyers à réduire le gaspillage alimentaire. Les utilisateurs constituent des listes de courses hebdomadaires, suivent les aliments qu'ils possèdent déjà et reçoivent une notification avant qu'un aliment n'atteigne sa date d'expiration. L'application s'appuie sur des modèles de machine learning pour prédire la durée de conservation d'un aliment et la quantité qu'il vaut la peine d'acheter, afin que les utilisateurs n'achètent que ce dont ils ont réellement besoin. Elle est organisée en monorepo comprenant une application mobile Flutter, un backend FastAPI et les modèles ML entraînés.
